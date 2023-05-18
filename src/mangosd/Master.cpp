@@ -590,8 +590,8 @@ bool Master::_StartDB()
     if (!StartDB("World", WorldDatabase, MIGRATIONS_WORLD) ||
         !StartDB("Character", CharacterDatabase, MIGRATIONS_CHARACTERS) ||
         !StartDB("Login", LoginDatabase, MIGRATIONS_LOGON) ||
-        !StartDB("Logs", LogsDatabase, MIGRATIONS_LOGS) ||
-        !StartDB("Playerbot", PlayerbotDatabase, MIGRATIONS_PLAYERBOT))
+        !StartDB("Logs", LogsDatabase, MIGRATIONS_LOGS))
+        //!StartDB("Playerbot", PlayerbotDatabase, MIGRATIONS_PLAYERBOT))
     {
         WorldDatabase.HaltDelayThread();
         CharacterDatabase.HaltDelayThread();
